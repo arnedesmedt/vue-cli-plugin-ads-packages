@@ -20,20 +20,5 @@ module.exports = (api, options, rootOptions) => {
                 }
             );
         });
-
-        api.onCreateComplete(() => {
-            if(api.hasPlugin('eslint')) {
-                execSync(
-                    'npm run lint',
-                    {
-                        stdio: [
-                            0,
-                            'ignore',
-                            2,
-                        ],
-                    }
-                );
-            }
-        });
     }
 };
