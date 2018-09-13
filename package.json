@@ -1,0 +1,32 @@
+{
+  "name": "vue-cli-plugin-ads-packages",
+  "version": "1.0.0",
+  "scripts": {
+    "lint": "vue-cli-service lint",
+    "preversion": "npm run lint",
+    "postversion": "git push && git push --tags"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-eslint": "^3.0.3",
+    "@vue/cli-service": "^3.0.3",
+    "@vue/eslint-config-standard": "^3.0.3"
+  },
+  "main": "index.js",
+  "author": "Arne De Smedt <arnedesmdt@gmail.com> (https://twitter.com/ArneSmedt)",
+  "description": "A Vue CLI plugin for installing and configuring some handy packages.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/arnedesmedt/vue-cli-plugin-ads-packages.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arnedesmedt/vue-cli-plugin-ads-packages/issues"
+  },
+  "homepage": "https://github.com/arnedesmedt/vue-cli-plugin-ads-packages#readme",
+  "keywords": [
+    "vue",
+    "cli",
+    "plugin",
+    "packages"
+  ],
+  "license": "MIT"
+}
