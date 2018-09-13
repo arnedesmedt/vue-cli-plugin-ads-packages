@@ -6,6 +6,10 @@ const postcss = require('./postcss');
 const packageStyles = require('./package_styles');
 
 module.exports = (api, options, rootOptions) => {
+    if (! options.packages) {
+        options.packages = [];
+    }
+
     tailwind(api, options, rootOptions);
     fontAwesome(api, options, rootOptions);
     postcss(api, options, rootOptions);
@@ -21,6 +25,7 @@ module.exports = (api, options, rootOptions) => {
                         'ignore',
                         2,
                     ],
+                    cwd: api.resolve('./'),
                 }
             );
         }
