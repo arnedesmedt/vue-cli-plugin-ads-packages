@@ -8,6 +8,7 @@ module.exports = (api, options, rootOptions) => {
             },
         });
 
+        // TODO: Solve running this script on vue create
         api.onCreateComplete(() => {
             execSync(
                 './node_modules/.bin/tailwind init tailwind.config.js',
@@ -17,6 +18,7 @@ module.exports = (api, options, rootOptions) => {
                         'ignore',
                         2,
                     ],
+                    cwd: api.resolve('./'),
                 }
             );
         });
