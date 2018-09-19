@@ -1,9 +1,8 @@
-const { execSync } = require('child_process');
-
 const tailwind = require('./tailwind');
 const fontAwesome = require('./font_awesome');
 const postcss = require('./postcss');
 const packageStyles = require('./package_styles');
+const lint = require('./lint');
 
 module.exports = (api, options, rootOptions) => {
     if (! options.packages) {
@@ -14,20 +13,5 @@ module.exports = (api, options, rootOptions) => {
     fontAwesome(api, options, rootOptions);
     postcss(api, options, rootOptions);
     packageStyles(api, options, rootOptions);
-
-    api.onCreateComplete(() => {
-        if(api.hasPlugin('eslint')) {
-            execSync(
-                'npm run lint',
-                {
-                    stdio: [
-                        0,
-                        'ignore',
-                        2,
-                    ],
-                    cwd: api.resolve('./'),
-                }
-            );
-        }
-    });
+    lint(api, options, rootOptions);
 };
