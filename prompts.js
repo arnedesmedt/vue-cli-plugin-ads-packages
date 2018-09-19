@@ -12,10 +12,15 @@ module.exports = [
                 name: 'font awesome',
                 value: 'fontAwesome',
             },
+            {
+                name: 'purge css',
+                value: 'purgeCSS',
+            },
         ],
         default: [
             'tailwindcss',
             'fontAwesome',
+            'pugeCSS',
         ],
     },
 ];
