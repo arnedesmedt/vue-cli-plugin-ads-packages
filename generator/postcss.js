@@ -8,5 +8,6 @@ module.exports = (api, options, rootOptions) => {
 
     api.render('./template/postcss', {
         tailwindcss: options.packages.includes('tailwindcss'),
+        purgeCSS: options.packages.includes('purgeCSS'),
     });
 };
