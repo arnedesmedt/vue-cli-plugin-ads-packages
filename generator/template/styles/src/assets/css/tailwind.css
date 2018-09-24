@@ -1,0 +1,6 @@
+<% if (tailwindcss) { %>@tailwind preflight;
+
+@tailwind components;
+
+@tailwind utilities;
+<% } %>
