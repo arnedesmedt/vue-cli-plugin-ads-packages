@@ -32,7 +32,6 @@
   "files": [
     "/generator",
     "index.js",
-    "prompts.js",
-    "package.json"
+    "prompts.js"
   ]
 }
