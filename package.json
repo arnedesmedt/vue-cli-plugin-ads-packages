@@ -28,5 +28,11 @@
     "plugin",
     "packages"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "files": [
+    "/generator",
+    "index.js",
+    "prompts.js",
+    "package.json"
+  ]
 }
