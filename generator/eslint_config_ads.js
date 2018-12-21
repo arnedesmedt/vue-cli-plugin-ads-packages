@@ -1,8 +1,8 @@
 module.exports = (api, options, rootOptions) => {
-    if (options.packages.includes('prettierPackageJson')) {
+    if (api.hasPlugin('eslint')) {
         api.extendPackage({
             devDependencies: {
-                'prettier-package-json': 'latest',
+                'eslint-config-ads': 'latest',
             },
         });
     }

@@ -1,8 +1,8 @@
 module.exports = (api, options, rootOptions) => {
     api.extendPackage({
         devDependencies: {
-            'postcss-import': '*',
-            'postcss-url': '*',
+            'postcss-import': 'latest',
+            'postcss-url': 'latest',
         },
     });
 
