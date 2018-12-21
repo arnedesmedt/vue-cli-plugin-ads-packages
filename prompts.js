@@ -24,7 +24,7 @@ module.exports = [
         default: [
             'tailwindcss',
             'fontAwesome',
-            'pugeCSS',
+            'purgeCSS',
             'prettierPackageJson',
         ],
     },
