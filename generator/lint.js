@@ -4,7 +4,7 @@ module.exports = (api, options, rootOptions) => {
     api.onCreateComplete(() => {
         if(api.hasPlugin('eslint')) {
             execSync(
-                'npm run lint',
+                './node_modules/.bin/vue-cli-service lint .',
                 {
                     stdio: [
                         0,
@@ -18,7 +18,7 @@ module.exports = (api, options, rootOptions) => {
 
         if (api.hasPlugin('prettier-package-json')) {
             execSync(
-                'npm run package-lint',
+                './node_modules/.bin/prettier-package-json --write --tab-width=4 ./package.json',
                 {
                     stdio: [
                         0,
