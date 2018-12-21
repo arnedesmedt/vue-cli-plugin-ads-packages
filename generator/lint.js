@@ -1,12 +1,14 @@
 const { execSync } = require('child_process');
 
 module.exports = (api, options) => {
+    if(api.hasPlugin('eslint')) {
+        api.render('./template/eslint', {
+            tailwindcss: options.packages.includes('tailwindcss'),
+        });
+    }
+
     api.onCreateComplete(() => {
         if(api.hasPlugin('eslint')) {
-            api.render('./template/.eslintignore', {
-                tailwindcss: options.packages.includes('tailwindcss'),
-            });
-
             execSync(
                 './node_modules/.bin/vue-cli-service lint .',
                 {
