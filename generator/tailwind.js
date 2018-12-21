@@ -2,7 +2,7 @@ const { execSync } = require('child_process');
 const fs = require('fs');
 const configFile = 'tailwind.config.js';
 
-module.exports = (api, options, rootOptions) => {
+module.exports = (api, options) => {
     if (options.packages.includes('tailwindcss')) {
         api.extendPackage({
             devDependencies: {

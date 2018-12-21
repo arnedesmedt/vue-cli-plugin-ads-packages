@@ -1,6 +1,6 @@
 const { execSync } = require('child_process');
 
-module.exports = (api, options, rootOptions) => {
+module.exports = (api) => {
     api.onCreateComplete(() => {
         if(api.hasPlugin('eslint')) {
             execSync(
