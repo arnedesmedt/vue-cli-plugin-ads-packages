@@ -16,11 +16,16 @@ module.exports = [
                 name: 'purge css',
                 value: 'purgeCSS',
             },
+            {
+                name: 'prettier package.json',
+                value: 'prettierPackageJson',
+            },
         ],
         default: [
             'tailwindcss',
             'fontAwesome',
             'pugeCSS',
+            'prettierPackageJson',
         ],
     },
 ];
