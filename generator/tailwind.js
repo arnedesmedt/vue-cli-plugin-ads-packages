@@ -6,7 +6,7 @@ module.exports = (api, options) => {
     if (options.packages.includes('tailwindcss')) {
         api.extendPackage({
             devDependencies: {
-                tailwindcss: '*',
+                tailwindcss: '^1.0.0-beta.4',
             },
         });
 

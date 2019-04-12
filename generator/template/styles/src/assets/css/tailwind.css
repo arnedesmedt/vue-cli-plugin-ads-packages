@@ -1,4 +1,4 @@
-<% if (tailwindcss) { %>@tailwind preflight;
+<% if (tailwindcss) { %>@tailwind base;
 
 @tailwind components;
 
